@@ -1,8 +1,8 @@
 const weatherOptions = [
-  { url: "../images/day/sunny.svg", day: true, type: "sunny" },
-  { url: "/images/day/cloudy.svg", day: true, type: "cloudy" },
-  { url: "/images/night/cloud.svg", day: false, type: "cloud" },
-  { url: "/images/night/moon.svg", day: false, type: "moon" },
+  { url: require("../images/day/sunny.svg").default, day: true, type: "sunny" },
+  { url: require("../images/night/cloud.svg").default, day: false, type: "cloud" },
+  { url: require("../images/day/cloudy.svg").default, day: true, type: "cloudy" },
+  { url: require("../images/night/moon.svg").default, day: false, type: "moon" },
 ];
 
 const WeatherCard = ({ day=true, type='sunny', weatherTemp = 0 }) => {
@@ -13,6 +13,7 @@ const WeatherCard = ({ day=true, type='sunny', weatherTemp = 0 }) => {
 
 
   const imageSrcUrl = imageSrc[0].url || "";
+  
   return (
     <section className="weather" id="weather">
       <div className="weather_info">{weatherTemp} F</div>

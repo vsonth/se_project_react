@@ -7,7 +7,7 @@ const Header = ({onCreateModal}) => {
         <header className="header">
         <div className="header__logo">
           <div>
-            <img src="/images/logo.svg" alt="logo" />
+            <img src={require("../images/logo.svg").default} alt="logo" />
           </div>
           <div>Date</div>
         </div>
