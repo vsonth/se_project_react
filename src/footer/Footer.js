@@ -1,6 +1,6 @@
 const Footer = () => {
 
-    console.log('footer')
+    
 return (
     <footer className="footer">
     <div>
